@@ -4,7 +4,7 @@
     $pw = $_POST['pw'];
 
     // SELECT 조회, INSERT 삽입, DELETE 삭제, UPDATE 변경
-    $sql = "SELECT * FROM `user` WHERE id='$id' AND pw='$pw'";
+    $sql = "SELECT * FROM `user` WHERE id='$id' AND pw='$pw' AND del_flg=0;";
     $result = mysqli_query($conn, $sql);
     $row = $result->num_rows; // 결과값을 정수로 변환
     if($row > 0) {
