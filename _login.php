@@ -13,6 +13,5 @@
         echo "<script>alert('로그인 완료');location.href='index.php'</script>";
     } else {
         echo "<script>alert('로그인 실패, 아이디나 비밀번호를 확인해 주세요.');location.href='login.php'</script>";
-    }
-
+    }       
 ?>
