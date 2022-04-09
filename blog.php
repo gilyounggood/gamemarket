@@ -17,10 +17,14 @@
             <div class="row">
                 <div class="col-12 col-lg-9">
 
-
-
-
                     <?php
+                        if (isset($_SESSION['id'])) {
+                    ?>  
+                        <button class="btn btn-secondary" onclick="location.href='blog1write.php'">글작성</button>
+                        <hr>   
+                    <?php        
+                        }
+
                         foreach($result as $blog) {
                     ?>
 
@@ -31,8 +35,13 @@
                             <a href="#"><img src="img/bg-img/blog1.jpg" alt="blog image"></a>
                             <!-- Post Date -->
                             <div class="post-date">
-                                <span>15</span>
-                                <span>June ‘18</span>
+                                <?php 
+                                    $day = date("d", strtotime($blog['reg_date']));
+                                    $month = date("F", strtotime($blog['reg_date']));
+                                    $year = date("y", strtotime($blog['reg_date']));
+                                ?>
+                                <span><?=$day;?></span>
+                                <span><?=$month;?> <?=$year;?></span>
                             </div>
                         </div>
 
@@ -47,10 +56,25 @@
                             </div>
                             <!-- Post Excerpt -->
                             <p><?=$blog['content'];?></p>
+ 
+                            <hr>
+
+                            <!-- 수정, 삭제 버튼-->
+                            <?php 
+                                if(isset($_SESSION['id'])) {
+                                    if($_SESSION['id'] == $blog['id']) { 
+                            ?>
+                                        <button class="btn btn-secondary" onclick="location.href='blog1mod.php?no=<?=$blog['no'];?>'">수정</button>
+                                        <button class="btn btn-secondary" onclick="location.href='_blog1delete.php?no=<?=$blog['no'];?>'">삭제</button>
+                            <?php 
+                                    }
+                                }                             
+                            ?>               
+
                         </div>
                     </div>
                     <!-- Single Post End -->
-
+                            
                     <?php
                         }
                     ?>
