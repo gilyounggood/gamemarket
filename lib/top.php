@@ -58,7 +58,7 @@
                                 <ul>
                                     <li><a href="index.php">홈</a></li>
                                     <li><a href="albums-store.php">화면공유</a></li>
-                                    <li><a href="#">커뮤니티</a>
+                                    <li><a href="#">뉴스</a>
                                         <ul class="dropdown">
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="albums-store.php">Albums</a></li>
@@ -87,7 +87,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="event.php">이벤트</a></li>
-                                    <li><a href="blog.php">뉴스</a></li>
+                                    <li><a href="blog.php">커뮤니티</a></li>
                                     <li><a href="contact.php">게임</a></li>
                                 </ul>
 
