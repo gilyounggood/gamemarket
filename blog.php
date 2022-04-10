@@ -36,9 +36,15 @@
                             <!-- Post Date -->
                             <div class="post-date">
                                 <?php 
-                                    $day = date("d", strtotime($blog['reg_date']));
-                                    $month = date("F", strtotime($blog['reg_date']));
-                                    $year = date("y", strtotime($blog['reg_date']));
+                                    if($blog['mod_date'] != null) {
+                                        $day = date("d", strtotime($blog['mod_date']));
+                                        $month = date("F", strtotime($blog['mod_date']));
+                                        $year = date("y", strtotime($blog['mod_date']));                                        
+                                    } else {
+                                        $day = date("d", strtotime($blog['reg_date']));
+                                        $month = date("F", strtotime($blog['reg_date']));
+                                        $year = date("y", strtotime($blog['reg_date']));
+                                    }
                                 ?>
                                 <span><?=$day;?></span>
                                 <span><?=$month;?> <?=$year;?></span>
