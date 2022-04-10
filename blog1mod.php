@@ -39,20 +39,20 @@
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <input name="category" type="text" class="form-control" placeholder="카테고리를 작성해주세요." value="<?=$mod['category'];?>">
-                                    <div>
-                                </div>
-                                    <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="content" class="form-control" id="message" cols="30" rows="10" placeholder="본문 내용을 작성해주세요."><?=$mod['content'];?></textarea>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
+                                <div class="col-12"> 
+                                    <div class="form-group">
+                                        <textarea name="content" class="form-control" cols="30" rows="10" placeholder="본문 내용을 작성해주세요."><?=$mod['content'];?></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12"> 
                                     <div class="form-group">
                                         <input name="img_file" type="file" class="form-control">
-                                    <div>
+                                    </div>
                                 </div>
 
-                                <div class="col-12 text-center">
+                                <div class="col-12 text-center"> 
                                     <button class="btn oneMusic-btn mt-30" type="submit">작성 <i class="fa fa-angle-double-right"></i></button>
                                 </div>
                             </div>
