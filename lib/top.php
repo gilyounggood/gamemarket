@@ -88,6 +88,7 @@
                                     </li>
                                     <li><a href="event.php">이벤트</a></li>
                                     <li><a href="blog.php">커뮤니티</a></li>
+                                    <li><a href="bbs.php">아이템 거래소</a></li>
                                     <li><a href="contact.php">게임</a></li>
                                 </ul>
 
