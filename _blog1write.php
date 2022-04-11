@@ -9,7 +9,7 @@
     $img_file = $_FILES['img_file'];
     $img_size = $_FILES['img_file'];['size'];
 
-    require('_file_upload.php');
+    require('_blog_file_upload.php');
 
     if($result) {
         // 파일이 있을 경우

@@ -3,7 +3,7 @@
 <?php
     $no = $_GET['no'];
     require('_conn.php');
-    $sql = "SELECT * FROM `blog1` WHERE `no` = $no";
+    $sql = "SELECT * FROM `bbs1` WHERE `no` = $no";
     $result = mysqli_query($conn, $sql);
 ?>
 
@@ -26,7 +26,7 @@
 
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="_blog1mod.php" method="post">
+                        <form action="_bbs1mod.php" method="post">
                             <div class="row">
 
                                 <input name="no" type="hidden" value ="<?=$mod['no'];?>">

@@ -1,6 +1,6 @@
 <?php require('lib/top.php'); ?>
 
-<?php require('_blog1page.php'); ?>
+<?php require('_bbs1page.php'); ?>
 
     <!-- ##### Breadcumb Area Start ##### -->
     <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
@@ -11,7 +11,7 @@
     </section>
     <!-- ##### Breadcumb Area End ##### -->
 
-    <!-- ##### Blog Area Start ##### -->
+    <!-- ##### BBS Area Start ##### -->
     <div class="blog-area section-padding-100">
         <div class="container">
             <div class="row">
@@ -20,66 +20,41 @@
                     <?php
                         if (isset($_SESSION['id'])) {
                     ?>  
-                        <button class="btn btn-secondary" onclick="location.href='blog1write.php'">글작성</button>
+                        <button class="btn btn-secondary" onclick="location.href='bbs1write.php'">글작성</button>
                         <hr>   
                     <?php        
                         }
 
-                        foreach($result as $blog) {
+                        foreach($result as $bbs) {
                     ?>
 
                     <!-- Single Post Start -->
-                    <div class="single-blog-post mb-100 wow fadeInUp" data-wow-delay="100ms">
-                        <!-- Post Thumb -->
-                        <div class="blog-post-thumb mt-30">
-                            <?php if($blog['img_file']) { ?>
-                                <a href="#"><img src="blog_img/<?=$blog['img_file'];?>" alt="blog image"></a>
-                            <?php } else { ?>
-                                <a href="#"><img src="blog_img/noimage.png" alt="no blog image"></a>
-                            <?php } ?>
-                            <!-- Post Date -->
-                            <div class="post-date">
-                                <?php 
-                                    if($blog['mod_date'] != null) {
-                                        $day = date("d", strtotime($blog['mod_date']));
-                                        $month = date("F", strtotime($blog['mod_date']));
-                                        $year = date("y", strtotime($blog['mod_date']));                                        
-                                    } else {
-                                        $day = date("d", strtotime($blog['reg_date']));
-                                        $month = date("F", strtotime($blog['reg_date']));
-                                        $year = date("y", strtotime($blog['reg_date']));
-                                    }
-                                ?>
-                                <span><?=$day;?></span>
-                                <span><?=$month;?> <?=$year;?></span>
-                            </div>
-                        </div>
-
-                        <!-- Blog Content -->
+                    <div class="single-blog-post mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <!-- BBS Content -->
                         <div class="blog-content">
                             <!-- Post Title -->
-                            <a href="#" class="post-title"><?=$blog['title'];?></a>
-                            <!-- Post Meta -->
                             <div class="post-meta d-flex mb-30">
-                                <p class="post-author">By<a href="#"> <?=$blog['name'];?></a></p>
-                                <p class="tags">in<a href="#"> <?=$blog['category'];?></a></p>
+                                <?php if($bbs['img_file']) { ?>
+                                    <img class="mr-5" style="height:50px;" src="bbs_img/<?=$bbs['img_file'];?>" alt="bbs image">
+                                <?php } else { ?>
+                                    <img class="mr-5" style="height:50px;" src="bbs_img/noimage.png" alt="no bbs image">
+                                <?php } ?>   
+                                <a href="bbsview.php?no=<?=$bbs['no'];?>&current_page=<?=$current_page;?>" class="pr-5 post-title"><?=$bbs['title'];?></a>
+                                <p class="post-author">작성자:<a href="#"> <?=$bbs['name'];?></a></p>
+                                <p class="tags">카테고리:<a href="#"> <?=$bbs['category'];?></a></p>
+                                <!-- 수정, 삭제 버튼-->
+                                <?php 
+                                    if(isset($_SESSION['id'])) {
+                                        if($_SESSION['id'] == $bbs['id']) { 
+                                ?>
+                                            <button class="ml-5 btn btn-secondary" onclick="location.href='bbs1mod.php?no=<?=$bbs['no'];?>'">수정</button>
+                                            <button class="ml-1 btn btn-secondary" onclick="location.href='_bbs1delete.php?no=<?=$bbs['no'];?>'">삭제</button>
+                                <?php 
+                                        }
+                                    }                             
+                                ?>               
                             </div>
-                            <!-- Post Excerpt -->
-                            <p><?=$blog['content'];?></p>
- 
-                            <hr>
 
-                            <!-- 수정, 삭제 버튼-->
-                            <?php 
-                                if(isset($_SESSION['id'])) {
-                                    if($_SESSION['id'] == $blog['id']) { 
-                            ?>
-                                        <button class="btn btn-secondary" onclick="location.href='blog1mod.php?no=<?=$blog['no'];?>'">수정</button>
-                                        <button class="btn btn-secondary" onclick="location.href='_blog1delete.php?no=<?=$blog['no'];?>'">삭제</button>
-                            <?php 
-                                    }
-                                }                             
-                            ?>               
 
                         </div>
                     </div>
@@ -95,20 +70,21 @@
                     <div class="oneMusic-pagination-area wow fadeInUp" data-wow-delay="300ms">
                         <nav>
                             <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="blog.php?current_page=1">&laquo;</a></li>
+                                <li class="page-item active"><a class="page-link" href="bbs.php?current_page=1">&laquo;</a></li>
 
                                 <?php if ($current_page > 1) { ?>    
-                                    <li class="page-item active"><a class="page-link" href="blog.php?current_page=<?=$prev_page;?>">앞</a></li>
+                                    <li class="page-item active"><a class="page-link" href="bbs.php?current_page=<?=$prev_page;?>">앞</a></li>
                                 <?php } else { ?>
                                     <li class="page-item active"><a class="page-link" href="#">앞</a></li>        
                                 <?php } ?>  
 
                                 <?php if ($current_page < $end_page) { ?>        
-                                    <li class="page-item active"><a class="page-link" href="blog.php?current_page=<?=$next_page;?>">뒤</a></li>
+                                    <li class="page-item active"><a class="page-link" href="bbs.php?current_page=<?=$next_page;?>">뒤</a></li>
                                 <?php } else { ?> 
                                     <li class="page-item active"><a class="page-link" href="#">뒤</a></li>
-                                <?php } ?>     
-                                    <li class="page-item active"><a class="page-link" href="blog.php?current_page=<?=$end_page;?>">&raquo;</a></li>
+                                <?php } ?>  
+
+                                    <li class="page-item active"><a class="page-link" href="bbs.php?current_page=<?=$end_page;?>">&raquo;</a></li>
                                 <p>현재 페이지 <?=$current_page;?> / 총 페이지 <?=$end_page;?></p>
                             </ul>
                         </nav>
@@ -187,7 +163,7 @@
             </div>
         </div>
     </div>
-    <!-- ##### Blog Area End ##### -->
+    <!-- ##### BBS Area End ##### -->
 
     <!-- ##### Contact Area Start ##### -->
     <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
