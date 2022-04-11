@@ -16,7 +16,7 @@
                 <div class="col-12">
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="_blog1write.php" method="post">
+                        <form action="_blog1write.php" method="post" enctype ="multipart/form-data">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
