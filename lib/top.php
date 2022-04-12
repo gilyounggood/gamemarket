@@ -35,10 +35,10 @@
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+                    <nav class="classy-navbar justify-content-between">
 
                         <!-- Nav brand -->
-                        <a href="index.php" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+                        <a href="index.php" class="nav-brand">게임마켓</a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -58,34 +58,6 @@
                                 <ul>
                                     <li><a href="index.php">홈</a></li>
                                     <li><a href="albums-store.php">화면공유</a></li>
-                                    <li><a href="#">뉴스</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.php">Home</a></li>
-                                            <li><a href="albums-store.php">Albums</a></li>
-                                            <li><a href="event.php">Events</a></li>
-                                            <li><a href="blog.php">News</a></li>
-                                            <li><a href="contact.php">Contact</a></li>
-                                            <li><a href="elements.php">Elements</a></li>
-                                            <li><a href="login.php">Login</a></li>
-                                            <li><a href="#">Dropdown</a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a>
-                                                        <ul class="dropdown">
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
                                     <li><a href="event.php">이벤트</a></li>
                                     <li><a href="blog.php">커뮤니티</a></li>
                                     <li><a href="bbs.php">아이템 거래소</a></li>
@@ -104,11 +76,6 @@
                                            <a href="join.php">/ 회원가입</a>
                                         <?php } ?>
                                     </div>
-
-                                    <!-- Cart Button -->
-                                    <div class="cart-btn">
-                                        <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
-                                    </div>
                                 </div>
                             </div>
                             <!-- Nav End -->
@@ -119,4 +86,5 @@
             </div>
         </div>
     </header>
+
     <!-- ##### Header Area End ##### -->

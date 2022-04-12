@@ -1,12 +1,12 @@
 <?php require('lib/top.php'); ?>    
     
     <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/회색.png);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading white">
-                        <p>See what’s new</p>
+                        <p>게시글을 작성해 주세요</p>
                         <h2>게시글 작성</h2>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 <?php require('lib/top.php'); ?>
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+    <section class="breadcumb-area bg-img" style="background-image: url(img/회색.png);">
         <div class="bradcumbContent">
-            <p>See what’s new</p>
-            <h2>Join</h2>
+            <p>회원가입 화면 입니다</p>
+            <h2>회원가입</h2>
         </div>
     </section>
     <!-- ##### Breadcumb Area End ##### -->
@@ -15,14 +15,14 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
                     <div class="login-content">
-                        <h3>Join Us</h3>
+                        <h3>환영합니다</h3>
                         <!-- Login Form -->
                         <div class="login-form">
                             <form action="_join.php" method="post">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1" class="text-danger">* Email 주소</label>
                                     <input name="id" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="* E-mail 주소를 입력해 주세요">
-                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>회원가입 정보는 다른 곳에 이용하지 않습니다</small>
                                 </div>
 
                                 <div class="form-group">
@@ -40,7 +40,7 @@
                                     <input name="name" type="text" class="form-control" placeholder="* 이름을 입력해 주세요">
                                 </div>
 
-                                <button type="submit" class="btn oneMusic-btn mt-30">Join</button>
+                                <button type="submit" class="btn oneMusic-btn mt-30">가입하기</button>
                             </form>
                         </div>
                     </div>

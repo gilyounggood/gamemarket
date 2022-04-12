@@ -1,10 +1,10 @@
 <?php require('lib/top.php'); ?>
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+    <section class="breadcumb-area bg-img" style="background-image: url(img/회색.png);">
         <div class="bradcumbContent">
-            <p>See what’s new</p>
-            <h2>Login</h2>
+            <p>로그인 화면 입니다</p>
+            <h2>로그인</h2>
         </div>
     </section>
     <!-- ##### Breadcumb Area End ##### -->
@@ -20,15 +20,15 @@
                         <div class="login-form">
                             <form action="_login.php" method="post">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input name="id" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter E-mail">
-                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>We'll never share your email with anyone else.</small>
+                                    <label for="exampleInputEmail1">이메일 주소</label>
+                                    <input name="id" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="이메일 주소를 입력하세요">
+                                    <small id="emailHelp" class="form-text text-muted"><i class="fa fa-lock mr-2"></i>로그인 정보는 다른 곳에 이용하지 않습니다</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Password</label>
-                                    <input name="pw" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    <label for="exampleInputPassword1">비밀번호</label>
+                                    <input name="pw" type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호를 입력하세요">
                                 </div>
-                                <button type="submit" class="btn oneMusic-btn mt-30">Login</button>
+                                <button type="submit" class="btn oneMusic-btn mt-30">로그인</button>
                             </form>
                         </div>
                     </div>
