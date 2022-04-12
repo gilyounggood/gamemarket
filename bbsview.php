@@ -10,7 +10,7 @@
     <!-- ##### Breadcumb Area Start ##### -->
     <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
         <div class="bradcumbContent">
-            <p>See what’s new</p>
+            <p>게시판을 조회해보세요</p>
             <h2>게시판 조회</h2>
         </div>
     </section>
