@@ -18,6 +18,7 @@
 
     // 조회
     $sql = "SELECT * FROM `bbs1` WHERE `del_flg`=0 ORDER BY no DESC LIMIT $start_item, $show_item";
+
     $result = mysqli_query($conn, $sql);
     
     // 이전, 다음페이지
