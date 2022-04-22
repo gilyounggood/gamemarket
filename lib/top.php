@@ -2,93 +2,58 @@
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Title -->
+    <!--구글 폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/81f65674d3.js"
+    crossorigin="anonymous">
+    </script>
+    <script src="main.js" defer></script>
     <title>게임마켓</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+    <!-- 헤더 영역 시작 -->
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fa-solid fa-gamepad"></i>
+            <a href="index.php">게임마켓</a>
         </div>
-    </div>
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-        <!-- Navbar Area -->
-        <div class="oneMusic-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between">
+        <ul class="navbar__menu">   
+                <li><a href="index.php">홈</a></li>
+                <li><a href="albums-store.php">강화 확률</a></li>
+                <li><a href="event.php">이벤트</a></li>
+                <li><a href="blog.php">게임 앨범</a></li>
+                <li><a href="bbs.php">유저 커뮤니티</a></li>   
+        </ul>
 
-                        <!-- Nav brand -->
-                        <a href="index.php" class="nav-brand">게임마켓</a>
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li><a href="index.php">홈</a></li>
-                                    <li><a href="albums-store.php">화면공유</a></li>
-                                    <li><a href="event.php">이벤트</a></li>
-                                    <li><a href="blog.php">커뮤니티</a></li>
-                                    <li><a href="bbs.php">아이템 거래소</a></li>
-                                    <li><a href="contact.php">게임</a></li>
-                                </ul>
-
-                                <!-- Login/Register & Cart Button -->
-                                <div class="login-register-cart-button d-flex align-items-center">
-                                    <!-- Login/Register -->
-                                    <div class="login-register-btn mr-50">
-                                        <?php if(isset($_SESSION['id'])) { ?>
-                                           <a href="user.php"><?php if(isset($_SESSION['name'])) { echo $_SESSION['name']; } ?></a>
-                                           <a href="_logout.php"> / Logout</a>
-                                        <?php } else { ?>
-                                           <a href="login.php" id="loginBtn">로그인</a>
-                                           <a href="join.php">/ 회원가입</a>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Nav End -->
-
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- ##### Header Area End ##### -->
+        <!-- 헤더 로그인 영역 -->
+        <ul class="navbar__icons">
+                <?php if(isset($_SESSION['id'])) { ?>
+                    <li><a href="user.php"><?php if(isset($_SESSION['name'])) { echo $_SESSION['name']; } ?></a></li>
+                    <li><a href="_logout.php"> / Logout</a></li>
+                <?php } else { ?>
+                    <li><a href="login.php" id="loginBtn">로그인</a></li>
+                    <li><a href="join.php">회원가입</a></li>
+                <?php } ?>
+        </ul>
+        
+        <!-- 로그인 오른쪽 버튼 -->
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    <!-- 헤더 끝 -->

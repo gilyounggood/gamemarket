@@ -1,4 +1,5 @@
 <?php
+session_start();
     require('_conn.php');
     
     $sql = "SELECT * FROM `user` WHERE id='$id'";

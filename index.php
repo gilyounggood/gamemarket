@@ -1,39 +1,15 @@
 <?php require('lib/top.php'); ?>
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img" style="background-image: url(img/회색.png);">
-        <div class="bradcumbContent">
-            <p>게임 아이템 거래소</p>
-            <h2>게임마켓</h2>
+    <!-- 홈 메인 화면 시작 -->
+    <div class="hero">
+        <br> <!-- h1 영역 밖으로 나감 방지 -->
+        <h1 class="slide-left">게임마켓</h1>
+        <p class="slide-left"> 게임마켓은 유저들에게 확률 계산 프래그램과<br>이벤트 정보와 갤러리 및 커뮤니티를 제공하는 사이트입니다 </p>
+        <div class="links slide-left">
+            <a href="albums-store.php" class="btn">확률 계산 프로그램 바로가기</a>
+            <a href="blog.php" class="btn2">갤러리 바로가기</a>
         </div>
-    </section>
-    <!-- ##### Breadcumb Area End ##### -->
-
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100-0">
-
-    </section>
-    <!-- ##### Contact Area End ##### -->
-
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-0-100">
-
-    </section>
-    <!-- ##### Contact Area End ##### -->
-
-        <!-- ##### Contact Area Start ##### -->
-        <section class="contact-area section-padding-10" style="background-image: url(img/회색.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading white">
-                        <p>게임 아이템 거래소</p>
-                        <h2>게임마켓</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
-    <!-- ##### Contact Area End ##### -->
+    </div>
+    <!-- 홈 메인 화면 끝 -->
 
 <?php require('lib/bottom.php'); ?>

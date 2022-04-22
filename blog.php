@@ -1,16 +1,6 @@
 <?php require('lib/top.php'); ?>
 
 <?php require('_blog1page.php'); ?>
-
-    <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img" style="background-image: url(img/회색.png);">
-        <div class="bradcumbContent">
-            <p>유저 커뮤니티 입니다</p>
-            <h2>커뮤니티</h2>
-        </div>
-    </section>
-    <!-- ##### Breadcumb Area End ##### -->
-
     <!-- ##### Blog Area Start ##### -->
     <div class="blog-area section-padding-100">
         <div class="container">
@@ -20,7 +10,7 @@
                     <?php
                         if (isset($_SESSION['id'])) {
                     ?>  
-                        <button class="btn btn-secondary" onclick="location.href='blog1write.php'">글작성</button>
+                        <button onclick="location.href='blog1write.php'">글작성</button>
                         <hr>   
                     <?php        
                         }
@@ -74,8 +64,8 @@
                                 if(isset($_SESSION['id'])) {
                                     if($_SESSION['id'] == $blog['id']) { 
                             ?>
-                                        <button class="btn btn-secondary" onclick="location.href='blog1mod.php?no=<?=$blog['no'];?>'">수정</button>
-                                        <button class="btn btn-secondary" onclick="location.href='_blog1delete.php?no=<?=$blog['no'];?>'">삭제</button>
+                                        <button onclick="location.href='blog1mod.php?no=<?=$blog['no'];?>'">수정</button>
+                                        <button onclick="location.href='_blog1delete.php?no=<?=$blog['no'];?>'">삭제</button>
                             <?php 
                                     }
                                 }                             
@@ -88,55 +78,32 @@
                     <?php
                         }
                     ?>
-
-
                     
                     <!-- Pagination -->
                     <div class="oneMusic-pagination-area wow fadeInUp" data-wow-delay="300ms">
                         <nav>
                             <ul class="pagination">
-                                <li class="page-item active"><a class="btn btn-secondary" href="blog.php?current_page=1">&laquo;</a></li>
+                                <li class="page-item active"><a href="blog.php?current_page=1">&laquo;</a></li>
 
                                 <?php if ($current_page > 1) { ?>    
-                                    <li class="page-item active"><a class="btn btn-secondary" href="blog.php?current_page=<?=$prev_page;?>">앞</a></li>
+                                    <li class="page-item active"><a href="blog.php?current_page=<?=$prev_page;?>">앞</a></li>
                                 <?php } else { ?>
-                                    <li class="page-item active"><a class="btn btn-secondary" href="#">앞</a></li>        
+                                    <li class="page-item active"><a href="#">앞</a></li>        
                                 <?php } ?>  
 
                                 <?php if ($current_page < $end_page) { ?>        
-                                    <li class="page-item active"><a class="btn btn-secondary" href="blog.php?current_page=<?=$next_page;?>">뒤</a></li>
+                                    <li class="page-item active"><a href="blog.php?current_page=<?=$next_page;?>">뒤</a></li>
                                 <?php } else { ?> 
-                                    <li class="page-item active"><a class="btn btn-secondary" href="#">뒤</a></li>
+                                    <li class="page-item active"><a href="#">뒤</a></li>
                                 <?php } ?>     
-                                    <li class="page-item active"><a class="btn btn-secondary" href="blog.php?current_page=<?=$end_page;?>">&raquo;</a></li>
+                                    <li class="page-item active"><a href="blog.php?current_page=<?=$end_page;?>">&raquo;</a></li>
                                 <p class="pl-3">현재 페이지 <?=$current_page;?> / 총 페이지 <?=$end_page;?></p>
                             </ul>
                         </nav>
                     </div>
                 </div>
-
-
-
-                
-
             </div>
         </div>
     </div>
     <!-- ##### Blog Area End ##### -->
-
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100" style="background-image: url(img/회색.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading white">
-                        <p>게임 아이템 거래소</p>
-                        <h2>게임마켓</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Contact Area End ##### -->
-
 <?php require('lib/bottom.php'); ?>
