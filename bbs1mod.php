@@ -7,64 +7,37 @@
     $result = mysqli_query($conn, $sql);
 ?>
 
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/회색.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading white">
-                        <p>게시글을 수정해 주세요</p>
-                        <h2>게시글 수정</h2>
-                    </div>
-                </div>
-            </div>
+<?php foreach($result as $mod) { ?>
 
-            <div class="row">
-                <div class="col-12">
-
-                    <?php foreach($result as $mod) { ?>
-
-                    <!-- Contact Form Area -->
-                    <div class="contact-form-area">
-                        <form action="_bbs1mod.php" method="post">
-                            <div class="row">
-
-                                <input name="no" type="hidden" value ="<?=$mod['no'];?>">
-
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input name="title" type="text" class="form-control" placeholder="제목을 작성해 주세요." value="<?=$mod['title'];?>">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input name="category" type="text" class="form-control" placeholder="카테고리를 작성해주세요." value="<?=$mod['category'];?>">
-                                    </div>
-                                </div>
-                                <div class="col-12"> 
-                                    <div class="form-group">
-                                        <textarea name="content" class="form-control" cols="30" rows="10" placeholder="본문 내용을 작성해주세요."><?=$mod['content'];?></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12"> 
-                                    <div class="form-group">
-                                        <input name="img_file" type="file" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 text-center"> 
-                                    <button class="btn oneMusic-btn mt-30" type="submit">작성 <i class="fa fa-angle-double-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <?php } ?>
-                    
-                </div>
+<!-- 커뮤니티 글 수정 영역 시작 -->
+<div class="write">
+    <form action="_bbs1mod.php" method="post">
+        <input name="no" type="hidden" value ="<?=$mod['no'];?>">
+        <div class="title">
+            <h2>게시글 수정</h2>
+        </div>
+        <div class="half">
+            <div class="item">
+                <label>제목</label>
+                <input name="title" type="text" value="<?=$mod['title'];?>">
+            </div>  
+            <div class="item">
+                <label>카테고리</label>
+                <input name="category" type="text" value="<?=$mod['category'];?>">
             </div>
         </div>
-    </section>
-    <!-- ##### Contact Area End ##### -->
+        <div class="full">
+            <label>내용</label>
+            <textarea name="content"><?=$mod['content'];?></textarea>
+        </div>
+        <div class="action">
+            <button type="submit">수정</button>
+            <input name="img_file" type="file">
+        </div>   
+    </form>
+</div>
+<!-- 커뮤니티 글 수정 영역 끝 -->
+
+<?php } ?>
 
 <?php require('lib/bottom.php'); ?>

@@ -3,8 +3,14 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 /* 헤더 영역 시작*/
 body {
+    margin-bottom: 100px;
     margin: 0;
     position: relative;
     min-height: 100vh;  /* 푸터 최하단 고정 */
@@ -121,6 +127,7 @@ footer {
     height: auto;
     width: 100%;
     color: #fff;
+    height: 200px;
 }
 .footer-content {
     display: flex;
@@ -282,6 +289,7 @@ p.slide-left {
 
 /* 로그인, 회원가입, 회원정보, 정보수정 화면 시작 */
 .center {
+    margin-top: 70px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -388,6 +396,7 @@ form .txt_field {
 /* 로그인 화면 끝 회원가입 화면만 적용 */
 
 .center2 {
+    margin-top: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -530,3 +539,136 @@ form .txt2_field {
 }
 
 /* 정보수정 화면 끝*/
+
+/* blog1, bbs1 글 작성 화면 시작*/
+
+.write {
+    padding-bottom: 200px;
+}
+
+.write form {
+    background: #2691d9;
+    width: 640px;
+    margin: 50px auto;
+    max-width: 97%;
+    border-radius: 4px;    
+    padding: 50px 30px;
+    color: white;
+}
+
+.write form .title h2 {
+    letter-spacing: 6px;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+}
+
+.write form .half {
+    display: flex;
+    justify-content: space-between;
+}
+
+.write form .half .item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    width: 48%;
+}
+
+.write form label {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    margin-bottom: 16px;
+}
+
+.write form .half .item input {
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 16px;
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    font-size: 17px;
+}
+
+.write form .full {
+    margin-bottom: 24px;    
+}
+
+.write form .full textarea {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    outline: 0;
+    padding: 12px 16px;
+    width: 100%;
+    height: 200px;
+    font-size: 17px;
+}
+
+.write form .action {
+    margin-bottom: 32px;
+}
+
+.write form .action button {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    height: 44px;
+    letter-spacing: 5px;
+    outline: 0;
+    padding: 0 70px 0 70px;
+    margin-right: 10px;
+    margin-left: 0 50%;
+    background: white;
+    color: black;
+}
+
+.write form .action input {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    height: 27px;
+    letter-spacing: 1px;
+    outline: 0;
+    margin-left: 40px;
+}
+
+.write form .action button,
+.write form .action input {
+    margin-top: 30px;
+}
+
+.write form .half .item input:focus,
+.write form .full  textarea:focus,
+.write form .action input:hover {
+    background: rgb(165, 219, 255);
+}
+
+@media (max-width: 480px) {
+    .write form .half {
+        flex-direction: column;
+    }
+    .write form .item {
+        width: 100%;
+    }
+    .write form .action {
+        display: flex;
+        flex-direction: column;
+    }
+    .write form .action input{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/* blog1, bbs1 글 작성 화면 끝*/

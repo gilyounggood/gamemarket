@@ -1,54 +1,31 @@
 <?php require('lib/top.php'); ?>    
     
-    <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/회색.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading white">
-                        <p>게시글을 작성해 주세요</p>
-                        <h2>게시글 작성</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <!-- Contact Form Area -->
-                    <div class="contact-form-area">
-                        <form action="_blog1write.php" method="post" enctype ="multipart/form-data">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input name="title" type="text" class="form-control" placeholder="제목을 작성해 주세요.">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input name="category" type="text" class="form-control" placeholder="카테고리를 작성해주세요.">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="content" class="form-control" cols="30" rows="10" placeholder="본문 내용을 작성해주세요."></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <input name="img_file" type="file" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <button class="btn oneMusic-btn mt-30" type="submit">작성 <i class="fa fa-angle-double-right"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<!-- 블로그 글 작성 영역 시작 -->
+<div class="write">
+    <form action="_blog1write.php" method="post" enctype ="multipart/form-data">
+        <div class="title">
+            <h2>게시글 작성</h2>
+        </div>
+        <div class="half">
+            <div class="item">
+                <label>제목</label>
+                <input name="title" type="text">
+            </div>  
+            <div class="item">
+                <label>카테고리</label>
+                <input name="category" type="text">
             </div>
         </div>
-    </section>
-    <!-- ##### Contact Area End ##### -->
+        <div class="full">
+            <label>내용</label>
+            <textarea name="content"></textarea>
+        </div>
+        <div class="action">
+            <button type="submit">작성</button>
+            <input name="img_file" type="file">
+        </div>   
+    </form>
+</div>
+<!-- 블로그 글 작성 영역 끝 -->
 
 <?php require('lib/bottom.php'); ?>

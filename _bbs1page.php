@@ -1,4 +1,5 @@
 <?php
+session_start();
     // 페이지네이션
     if(isset($_GET['current_page'])) {
         $current_page = $_GET['current_page'];
