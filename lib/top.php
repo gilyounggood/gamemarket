@@ -1,6 +1,5 @@
 <?
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -36,24 +35,19 @@ session_start();
                 <li><a href="index.php">홈</a></li>
                 <li><a href="albums-store.php">강화 확률</a></li>
                 <li><a href="event.php">이벤트</a></li>
-                <li><a href="blog.php">게임 앨범</a></li>
-                <li><a href="bbs.php">유저 커뮤니티</a></li>   
+                <li><a href="blog.php">갤러리</a></li>
+                <li><a href="bbs.php">커뮤니티</a></li>   
         </ul>
 
         <!-- 헤더 로그인 영역 -->
         <ul class="navbar__icons">
                 <?php if(isset($_SESSION['id'])) { ?>
                     <li><a href="user.php"><?php if(isset($_SESSION['name'])) { echo $_SESSION['name']; } ?></a></li>
-                    <li><a href="_logout.php"> / Logout</a></li>
+                    <li><a href="_logout.php">Logout</a></li>
                 <?php } else { ?>
                     <li><a href="login.php" id="loginBtn">로그인</a></li>
                     <li><a href="join.php">회원가입</a></li>
                 <?php } ?>
         </ul>
-        
-        <!-- 로그인 오른쪽 버튼 -->
-        <a href="#" class="navbar__toogleBtn">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-    </nav>
-    <!-- 헤더 끝 -->
+</nav>
+<!-- 헤더 끝 -->

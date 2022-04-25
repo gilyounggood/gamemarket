@@ -9,8 +9,8 @@
                 <li><a href="index.php">홈</a></li>
                 <li><a href="albums-store.php">강화 확률</a></li>
                 <li><a href="event.php">이벤트</a></li>
-                <li><a href="blog.php">커뮤니티</a></li>
-                <li><a href="bbs.php">아이템 거래소</a></li> 
+                <li><a href="blog.php">갤러리</a></li>
+                <li><a href="bbs.php">커뮤니티</a></li> 
             </ul>    
         </div>
         <div class="footer-bottom">
