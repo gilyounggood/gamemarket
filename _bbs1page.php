@@ -7,7 +7,7 @@ session_start();
         $current_page = 1; 
     }
 
-    $show_item = 3;
+    $show_item = 6;
     $start_item = ($current_page - 1) * $show_item;
 
     require('_conn.php');
@@ -15,7 +15,7 @@ session_start();
     // 마지막 페이지 구하기
     $sql1 = "SELECT * FROM `bbs1` WHERE `del_flg`=0";
     $count = mysqli_query($conn, $sql1)->num_rows;
-    $end_page = ceil($count/3); 
+    $end_page = ceil($count/6); 
 
     // 조회
     $sql = "SELECT * FROM `bbs1` WHERE `del_flg`=0 ORDER BY no DESC LIMIT $start_item, $show_item";

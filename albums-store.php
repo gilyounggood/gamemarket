@@ -5,9 +5,11 @@
     <span>확률 계산 시스템입니다</span>
 </div>
 
-    <!-- 확률 강화 페이지 시작 -->
-        <div class="">
-        </div>
-
+<!-- 확률 강화 페이지 시작 -->
+<div class="calculator_body">
+    <div class="calculator">
+        <img src="img/무기.jpg">
+    </div>
+</div>
 
 <?php require('lib/bottom.php'); ?>
