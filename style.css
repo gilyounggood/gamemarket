@@ -1084,7 +1084,7 @@ section {
 
 /* bbs(커뮤니티) 페이지뷰 끝*/
 
-/* event 화면 시작*/
+/* 이벤트 화면 시작*/
 
 .event_body {
     padding-bottom: 200px;
@@ -1180,14 +1180,131 @@ section {
     transition: transform .5s;
 }
 
-/* event 화면 끝*/
+/* 이벤트 화면 끝*/
 
-/* calculator(계산기) 화면 시작*/
+/* 화면 공유 시작*/
 
-.calculator_body {
+.screen-body {
+    background-color: #fff;
+    padding-bottom: 200px;
+}
+
+.screen {
     width: 100%;
-    height: 1000px;
+    height: 1050px;
     display: flex;
     justify-content: center;
     text-align: center;
+    padding-top: 30px;
 }
+
+.screen h1 {
+    margin-top: 0;
+}
+
+.screen p {
+    color:#6f00ff;
+    padding-bottom: 10px;
+}
+
+.screen video {
+    width: 90vh;
+    height: 50vh;
+    border: 1px solid black;
+}
+
+#container {
+    padding: 60px;
+    box-shadow: 0 1.4rem 8rem rgba(0,0,0,.2);
+    border-radius: .8rem;
+    padding-bottom: 0px;
+    height: 950px;
+}
+
+#startButton {
+    margin-top: 40px;
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    background: rgb(0,172,238);
+    background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+#startButton span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#startButton:before,
+#startButton:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+#startButton:before {
+  height: 0%;
+  width: 2px;
+}
+#startButton:after {
+  width: 0%;
+  height: 2px;
+}
+#startButton:hover{
+   background: transparent;
+  box-shadow: none;
+}
+#startButton:hover:before {
+  height: 100%;
+}
+#startButton:hover:after {
+  width: 100%;
+}
+#startButton span:hover{
+   color: rgba(2,126,251,1);
+}
+#startButton span:before,
+#startButton span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+#startButton span:before {
+  width: 2px;
+  height: 0%;
+}
+#startButton span:after {
+  width: 0%;
+  height: 2px;
+}
+#startButton span:hover:before {
+  height: 100%;
+}
+#startButton span:hover:after {
+  width: 100%;
+}
+
+/* 화면 공유 끝*/
